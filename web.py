@@ -11,6 +11,12 @@ async def home_page():
 
     return await render_template('homepage.html')
 
+@app.route("/browse")
+async def browse():
+    """Render strony głownej."""
+
+    return await render_template('browse.html')
+
 @app.errorhandler(404)
 async def page_not_found(e):
     """Nasz własny 404 error handler."""
