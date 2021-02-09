@@ -1,59 +1,48 @@
 <html>
   <head>
-    <title>Shopify - {% block title %}{% endblock %}</title>
+    <title>FireStore - {% block title %}{% endblock %}</title>
     <!-- Importowanie bulmi (css bootstrap) -->
     <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css">
-    
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous"></script>
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e5971878b8.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/static/main.css">
   </head>
-  <body style="font-family: Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif;">
-    <nav class="navbar is-primary">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <b>Shopify</b>
-        </a>
+  <section class="hero is-medium">
+    <div class="hero-head">
+      <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div id="navbarPlaceholder" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="/">
+                Strona Głowna
+              </a>
 
-        <a role="button" class="navbar-burger" id="navbar-burger">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+              <a class="navbar-item" href="/browse">
+                Przeglądaj
+              </a>
+    
+              <a class="navbar-item" href="/about">
+                O Nas
+              </a>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div id="navbar" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="/">
-            Strona Głowna
-          </a>
-
-          <a class="navbar-item" href="/browse">
-            Przeglądaj
-          </a>
-
-          <a class="navbar-item" href="/about">
-            O Nas
-          </a>
-    </nav>
-
-    <!-- kontent renderu -->
-    <div class="container">
-      {% block content %}
-      {% endblock %}
     </div>
+  </section>
+  <!-- kontent renderu -->
+  {% block content %}
+  {% endblock %}
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Shopify</strong> Kod jest dostepny na <a href="https://github.com/lenforiee/szkolny-projekt"><i class="fa fa-github"></i> GitHubie!</a>
-        </p>
-      </div>
-    </footer>
-    <script src="/static/shop.js" crossorigin="anonymous"></script>
-  </body>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>FireStore © 2021.</strong> Kod jest dostepny na <a href="https://github.com/lenforiee/szkolny-projekt"><i class="fa fa-github"></i> GitHubie!</a>
+      </p>
+    </div>
+  </footer>
+  <script src="/static/shop.js" crossorigin="anonymous"></script>
 </html>
